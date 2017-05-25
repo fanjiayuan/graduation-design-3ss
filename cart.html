@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>三只松鼠——用户购物车</title>
+  <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+  <header id="header">
+    <div id="top">
+      <p><a href="index.html">网站首页</a></p>
+      <p>喵，欢迎来三只松鼠</p>
+      <ul>
+        <li><a href="#">我的淘宝</a></li>
+        <li><a href="#">我关注的品牌</a></li>
+        <li><a href="#">购物车<span> 0 </span>件</a></li>
+        <li><a href="#">收藏夹</a></li>
+        <li><a href="#">手机版</a></li>
+        <li><a href="#">淘宝网</a></li>
+        <li><a href="#">企业购</a></li>
+        <li><a href="#">商家支持</a></li>
+        <li><a href="#">网站导航</a></li>
+      </ul>
+    </div>
+    <div id="top_main">
+      <div id="cart_logo"></div>
+      <div id="top_search">
+        <input id="search-input" placeholder="爆米花" name="kw" autocomplete="off"><a href="#"
+                                                                                   id="search-control">搜本店</a>
+        <ol id="search-suggest"></ol>
+        <ul>
+          <li><a href="#">三只松鼠</a>|</li>
+          <li><a href="#">三只松鼠坚果</a>|</li>
+          <li><a href="#">三只松鼠礼盒</a>|</li>
+          <li><a href="#">三只松鼠榴莲</a>|</li>
+          <li><a href="#">榴莲饼</a>|</li>
+          <li><a href="#">牛肉干</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li class="active">全部商品
+        <span id="navNum">0</span>
+        <i></i>
+      </li>
+      <li>降价商品
+        <span>0</span>
+        <i></i>
+      </li>
+      <li>库存紧张
+        <span>0</span>
+      </li>
+    </ul>
+    <div class="wrap_line_parent">
+      <div class="wrap_line"></div>
+    </div>
+  </nav>
+
+  <section id="section">
+    <table id="cart">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" id="selAll" checked/>
+            <i></i>
+            <label for="selAll" style="margin-left:10px;">全选</label>
+          </th>
+          <th>商品</th>
+          <th>单价（元）</th>
+          <th>数量</th>
+          <th>小计</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <nav class="nav">
+      <ul>
+        <li class="active">掌柜热卖
+          <i></i>
+        </li>
+        <li>猜你喜欢的</li>
+      </ul>
+      <div class="wrap_line_parent">
+        <div class="wrap_line"></div>
+      </div>
+    </nav>
+
+    <div id="hotSell"></div>
+
+    <div id="cart_footer">
+      <div>
+        总价：<span>121212</span>
+        <button>去结算</button>
+      </div>
+    </div>
+  </section>
+  <footer id="footer"></footer>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

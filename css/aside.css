@@ -1,0 +1,153 @@
+#aside {
+  position: fixed;
+  top: 0;
+  width: 5px;
+  background: #000;
+  z-index: 999;
+  opacity: 0;
+}
+#aside b {
+  display: block;
+  width: 20px;
+  margin: 0 auto;
+  border-top: 1px solid #666;
+}
+#aside .aside-body > div,
+#aside #welcome {
+  width: 35px;
+}
+#aside .aside-body > div a,
+#aside #welcome a {
+  color: #fff;
+  display: block;
+  margin: auto;
+  width: 20px;
+  text-align: center;
+}
+#aside .aside-body > div a:hover,
+#aside #welcome a:hover {
+  text-decoration: none;
+}
+#aside #welcome {
+  position: absolute;
+  top: 8%;
+}
+#aside #welcome span {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  width: 35px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: #e40000;
+  word-break: break-all;
+}
+#aside #welcome a {
+  font-size: 14px;
+}
+#aside #welcome a:first-child {
+  margin-bottom: 10px;
+}
+#aside #welcome a:hover {
+  color: #e40000;
+}
+#aside .aside-body {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+#aside .aside-body .aside-cart {
+  padding: 30px 0 10px 0;
+  background: url(../Images/icon00.png) no-repeat 1px top;
+}
+#aside .aside-body .aside-cart:hover {
+  background-color: #e40000;
+}
+#aside .aside-body .aside-cart:hover a {
+  background: #e40000;
+}
+#aside .aside-body .aside-cart:hover #asideNum {
+  background-color: #fff;
+  color: #e40000;
+}
+#aside .aside-body .aside-icon {
+  width: 0;
+  height: 40px;
+  padding-left: 35px;
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+#aside .aside-body .aside-icon:hover {
+  background-color: #e40000;
+}
+#aside .aside-body .aside-icon.aside-icon01 {
+  top: 140px;
+  background-image: url(../Images/icon01.png);
+}
+#aside .aside-body .aside-icon.aside-icon02 {
+  top: 180px;
+  background-image: url(../Images/icon02.png);
+}
+#aside .aside-body .aside-icon.aside-icon03 {
+  top: 220px;
+  background-image: url(../Images/icon03.png);
+}
+#aside .aside-body .aside-icon.aside-icon04 {
+  top: 260px;
+  background-image: url(../Images/icon04.png);
+}
+#aside .aside-footer {
+  position: absolute;
+  left: 0;
+  top: 80%;
+  width: 35px;
+  height: 70px;
+}
+#aside .aside-footer > div {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+#aside .aside-footer > div:hover {
+  background-color: #e40000;
+}
+#aside .aside-footer .aside-code {
+  background: url(../Images/icon05.png) no-repeat center center;
+}
+#aside .aside-footer .aside-code:hover > div {
+  display: block;
+}
+#aside .aside-footer .aside-code > div {
+  display: none;
+  position: absolute;
+  width: 154px;
+  height: 207px;
+  left: -153px;
+  bottom: -10px;
+  background: url(../Images/bg06.png) no-repeat center center;
+}
+#aside .aside-footer .aside-code > div img {
+  width: 130px;
+  position: absolute;
+  left: 12px;
+  top: 50px;
+}
+#aside .aside-footer .aside-toTop {
+  background: url(../Images/icon07.png) no-repeat center center;
+}
+#asideNum {
+  display: block;
+  margin: 5px auto 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e40000;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-weight: normal;
+}

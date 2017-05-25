@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三只松鼠——管理员界面</title>
+    <link rel="stylesheet" href="admin/jquery-ui.min.css">
+    <link rel="stylesheet" href="admin/admin.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-brand">在线管理员页面</div>
+
+        <div class="button-groups">
+            <button id="modify_admin_password">修改管理员密码</button>
+            <div>
+                <input type="text" placeholder="请输入新密码。。。">
+                <button id="admin_password_sure">确定</button>
+                <button id="admin_password_cancel">取消</button>
+            </div>
+            <button id="goto_index">打开主页</button>
+        </div>
+
+        <div class="logo">
+            <img src="Images/t0153e4717b886dcb57.jpg">
+        </div>
+
+        <div id="datepicker"></div>
+    </div>
+
+    <div id="tabs">
+
+        <ul id="tabs_items">
+            <li><a href="#_products" data-tab="allActions">商品管理</a></li>
+            <li><a href="#_users" data-tab="userActions">用户管理</a></li>
+        </ul>
+
+        <!--//商品信息操作-->
+        <div id="_products">
+
+            <div id="accordion">
+                <h3>1F——国际坚果频道</h3>
+                <div id="_1F">
+                    <table class="pro-table">
+                        <thead>
+                            <tr>
+                                <th>商品编号</th>
+                                <th>商品图片(一)</th>
+                                <th>商品图片(二)</th>
+                                <th>商品名称</th>
+                                <th>商品价格（¥）</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr><td colspan="6">
+                                <button class="buttons" data-from="_1F">新增商品</button>
+                            </td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <h3>2F——发现好零食频道</h3>
+                <div id="_2F">
+                    <table class="pro-table">
+                        <thead>
+                        <tr>
+                            <th>商品编号</th>
+                            <th>商品图片(一)</th>
+                            <th>商品图片(二)</th>
+                            <th>商品名称</th>
+                            <th>商品价格（¥）</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr><td colspan="6">
+                                <button class="buttons" data-from="_2F">新增商品</button>
+                            </td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <h3>3F——小酷云果园频道</h3>
+                <div id="_3F">
+                    <table class="pro-table">
+                        <thead>
+                        <tr>
+                            <th>商品编号</th>
+                            <th>商品图片(一)</th>
+                            <th>商品图片(二)</th>
+                            <th>商品名称</th>
+                            <th>商品价格（¥）</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr><td colspan="6">
+                                <button class="buttons" data-from="_3F">新增商品</button>
+                            </td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <h3>4F——新疆正品频道</h3>
+                <div id="_4F">
+                    <table class="pro-table">
+                        <thead>
+                        <tr>
+                            <th>商品编号</th>
+                            <th>商品图片(一)</th>
+                            <th>商品图片(二)</th>
+                            <th>商品名称</th>
+                            <th>商品价格（¥）</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr><td colspan="6">
+                                <button class="buttons" data-from="_4F">新增商品</button>
+                            </td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <h3>5F——小贱零食频道</h3>
+                <div id="_5F">
+                    <table class="pro-table">
+                        <thead>
+                        <tr>
+                            <th>商品编号</th>
+                            <th>商品图片(一)</th>
+                            <th>商品图片(二)</th>
+                            <th>商品名称</th>
+                            <th>商品价格（¥）</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr><td colspan="6">
+                                <button class="buttons" data-from="_5F">新增商品</button>
+                            </td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!--//用户信息操作-->
+        <div id="_users">
+            <table>
+                <thead>
+                    <tr>
+                        <th>用户编号</th>
+                        <th>用户账号</th>
+                        <th>用户密码</th>
+                        <th>订单数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="allActions">
+            <a href="#" class="cannot" id="save">保存</a>
+            <a href="#" class="cannot" id="return">撤销</a>
+        </div>
+
+        <div id="userActions" style="display:none">
+            <a href="#" class="cannot" id="userSave">保存</a>
+            <a href="#" class="cannot" id="userReturn">撤销</a>
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="admin/jquery-ui.min.js"></script>
+    <script src="admin/admin.js"></script>
+</body>
+</html>

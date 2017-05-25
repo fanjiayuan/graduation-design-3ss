@@ -1,0 +1,144 @@
+#aside {
+  position: fixed;
+  top: 0;
+  width: 5px;
+  background: #000;
+  z-index: 999;
+  opacity: 0;
+  b {
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+    border-top: 1px solid #666;
+  }
+  .aside-body > div, #welcome {
+    width: 35px;
+    a {
+      color: #fff;
+      display: block;
+      margin: auto;
+      width: 20px;
+      text-align: center;
+      &:hover {
+        text-decoration: none
+      }
+    }
+  }
+  #welcome {
+    position: absolute;
+    top: 8%;
+    span{
+      position:absolute;
+      bottom:45px;left:0;
+      width:35px;
+      text-align: center;
+      font-size:10px;
+      font-weight: bold;
+      color:#e40000;
+      word-break: break-all;
+    }
+    a{
+      font-size:14px;
+      &:first-child{margin-bottom:10px;}
+    }
+    a:hover {
+      color: #e40000;
+    }
+  }
+  .aside-body {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    .aside-cart {
+      padding: 30px 0 10px 0;
+      background: url(../Images/icon00.png) no-repeat 1px top;
+      &:hover {
+        background-color: #e40000;
+        a {
+          background: #e40000;
+        }
+        #asideNum{
+          background-color: #fff;
+          color:#e40000;
+        }
+      }
+    }
+    .aside-icon {
+      width: 0;
+      height: 40px;
+      padding-left: 35px;
+      position: absolute;
+      left: 0;
+      z-index: 1000;
+      background-repeat: no-repeat;
+      background-position: left center;
+      &:hover {
+        background-color: #e40000;
+      }
+      &.aside-icon01 {
+        top: 140px;
+        background-image: url(../Images/icon01.png);
+      }
+      &.aside-icon02 {
+        top: 180px;
+        background-image: url(../Images/icon02.png);
+      }
+      &.aside-icon03 {
+        top: 220px;
+        background-image: url(../Images/icon03.png);
+      }
+      &.aside-icon04 {
+        top: 260px;
+        background-image: url(../Images/icon04.png);
+      }
+    }
+  }
+  .aside-footer{
+    position:absolute;
+    left:0;top:80%;
+    width:35px;
+    height:70px;
+    >div{
+      width:35px;
+      height:35px;
+      position: relative;
+      &:hover{
+        background-color: #e40000;
+      }
+    }
+    .aside-code{
+      background: url(../Images/icon05.png) no-repeat center center;
+      &:hover>div{display: block}
+      >div{
+        display: none;
+        position: absolute;
+        width:154px;
+        height:207px;
+        left:-153px;
+        bottom: -10px;
+        background: url(../Images/bg06.png) no-repeat center center;
+        img{
+          width:130px;
+          position:absolute;
+          left:12px; top:50px;
+        }
+      }
+    }
+    .aside-toTop{
+      background: url(../Images/icon07.png) no-repeat center center;
+    }
+  }
+}
+
+#asideNum{
+  display: block;
+  margin:5px auto 0;
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  background-color: #e40000;
+  color:#fff;
+  text-align: center;
+  line-height: 20px;
+  font-weight: normal;
+}

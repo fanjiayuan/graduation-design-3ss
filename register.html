@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三只松鼠——用户注册</title>
+    <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>用户注册</h1>
+            <form id="form-register">
+                <div class="form-group">
+                    <label class="control-label" for="uname">用户名：</label>
+                    <input class="form-control" id="uname" name="uname" autofocus autocomplete="off"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="upwd">密码：</label>
+                    <input class="form-control" id="upwd" name="upwd" type="password"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">验证码：</label>
+                    <input class="form-control" id="code_register" name="vcode"/>
+                    <img src="data/vcode.php" id="vcode">
+                </div>
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <a class="form-control" id="btn-register" href="#">注册</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <script>
+        var state = 'register';
+        $(function(){
+            $('body').css({
+                height:innerHeight
+            });
+        });
+
+        $('#vcode').click(function(){
+            vcode_update();
+        });
+
+        $("#btn-register").click(function(e){
+            e.preventDefault();
+//            用户名为空，则获得焦点
+            if($("#uname").val()===""){
+                uname.focus();
+                alert('请输入用户名！');
+                return;
+            }
+//            密码为空，则获得焦点
+            if($("#upwd").val()===""){
+                upwd.focus();
+                alert('请输入密码！');
+                return;
+            }
+
+            if($("#code_register").val()===""){
+                code_register.focus();
+                alert('请输入验证码！');
+                return;
+            }
+
+//            表单序列化
+            var data= $("#form-register").serialize();
+//            异步注册
+            $.ajax({
+                type:"POST",
+                url:"data/user_register.php",
+                data:data,
+                success:function(result){
+                    if(result.code===1) {
+                        sessionStorage["newUserName"] = result.uname;
+                        sessionStorage["newUserId"] = result.uid;
+                        location.href = "index.html";
+                    }else if(result.code===4){
+                        alert(result.msg);
+                        code_register.value="";
+                        vcode_update();
+                    }else if(result.code === 5){
+                        alert(result.msg);
+                        uname.value = upwd.value = code_register.value = "";
+                        vcode_update();
+                    }else{
+                        alert(result.msg);
+                    }
+                }
+            });
+        });
+
+        //刷新验证码
+        function vcode_update(){
+            vcode.src = 'data/vcode.php?_='+Math.random();
+        }
+
+        //触发回车键
+        document.addEventListener('keyup',function (e){
+            if(e.keyCode === 13 && (state === 'register')){
+                $('#btn-register').click();
+            }
+        });
+
+
+//        模拟雪花效果
+        $(document).snowfall();
+        $(document).snowfall({
+            flakeCount : 500,
+            flakeColor:'#fff',
+            maxSpeed : 6,
+            minSpeed:1,
+            maxSize:6,
+            minSize:1,
+            round:true,
+            shadow:true
+        });
+    </script>
+</body>
+</html>

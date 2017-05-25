@@ -1,0 +1,84 @@
+@import "common.less";
+.container{
+  width:1180px;
+  margin:20px auto;
+}
+#userOrder{
+  border-collapse: collapse;
+  width:100%;
+  td,th{border:1px solid #ccc;}
+  >thead tr{
+    background: #E7E7E7;
+    height:40px;
+    font-size:14px;
+  }
+  .order_odd{
+    background: #F5F5F5;
+    td{padding:7px 0 7px 15px;}
+  }
+  .order_even{
+    td{
+      height:70px;
+      text-align: center;
+      &:first-child{
+        width:413px;
+        padding:0 15px;
+        >p{
+          overflow:hidden;
+          height:50px;
+          width:100%;
+          text-align: left;
+        }
+      }
+    }
+    img{
+      height:50px;
+      border:1px solid #ccc;
+    }
+  }
+}
+
+#userOrder_loadMore{
+  display: block;
+  background: #2A9D92;
+  font-size: 14px;
+  font-weight: bold;
+  color:#fff;
+  text-align: center;
+  padding:10px 0;
+  width:100%;
+  border: none;
+  outline: none;
+  margin-top:10px;
+  &:hover{
+    background: #1FB589;
+    cursor: pointer;
+  }
+}
+.noMore{
+  display: none;
+  background: #2A9D92;
+  font-size: 14px;
+  font-weight: bold;
+  color:#fff;
+  text-align: center;
+  padding:10px 0;
+  width:100%;
+  margin-top:10px;
+}
+div.modal{
+  position: fixed;
+  top:0;bottom:0;left:0;right:0;
+  background: rgba(0,0,0,.8);
+  z-index: 10000;
+}
+.modal div.modal_main{
+  position: absolute;
+  top:60px;left:50%;
+  margin-left:-250px;
+  width:500px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding:20px 30px;
+}

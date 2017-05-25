@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三只松鼠——用户订单</title>
+    <link rel="stylesheet" href="css/order.css"/>
+</head>
+    <div id="header"></div>
+    <div id="section">
+        <div class="container">
+            <h1>填写并核对订单信息</h1>
+            <div class="main">
+                <div class="order_infor">
+                    <a id="order_user_new" href="#">新增收货地址</a>
+                    <h3>收货人信息</h3>
+                    <p>
+                        <span id="order_user_name"></span>&nbsp;
+                        <span id="order_user_addr"></span>&nbsp;
+                        <span id="order_user_phone"></span>
+                    </p>
+                </div>
+                <div class="order_infor">
+                    <h3>支付方式</h3>
+                    <ul id="payway">
+                        <li data-pay="0" class="active"><a href="#">网银支付</a></li>
+                        <li data-pay="1"><a href="#">支付宝支付</a></li>
+                        <li data-pay="2"><a href="#">微信支付</a></li>
+                    </ul>
+                </div>
+                <div id="trans" class="order_infor">
+                    <h3>配送方式</h3>
+                    <ul id="transway">
+                        <li data-trans="0" class="active"><a href="5">圆通快递</a></li>
+                        <li data-trans="1"><a href="3.3">顺丰快递</a></li>
+                        <li data-trans="2"><a href="2.5">中通快递</a></li>
+                        <li data-trans="3"><a href="0">申通快递</a></li>
+                    </ul>
+                </div>
+                <div class="order_infor">
+                    <h3>订单详情</h3>
+                    <table id="order_pro">
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="order_infor">
+                    <h3>发票信息</h3>
+                    <p>
+                        <span>普通发票（电子）</span>&nbsp;
+                        <span>个人</span>
+                        <span>明细</span>
+                    </p>
+                </div>
+            </div>
+            <div class="post_order">
+                <ul>
+                    <li>总商品金额：</li>
+                    <li id="allPro_pay"></li>
+                </ul>
+                <ul>
+                    <li>运费：</li>
+                    <li id="trans_pay">￥0.0</li>
+                </ul>
+                <ul>
+                    <li>应付金额：</li>
+                    <li id="last_pay"></li>
+                </ul>
+                <a id="order_post" href="#">提交订单</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div class="order_modal">
+        <div class="order_modal_main">
+            <h1>填写新的收货信息</h1>
+            <div class="form-group">
+                <label for="order_new_name">收货人姓名：</label>
+                <input id="order_new_name" class="form-control" autofocus autocomplete="off"/>
+            </div>
+            <div class="form-group">
+                <label for="order_new_addr">收货人地址：</label>
+                <input id="order_new_addr" class="form-control" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+                <label for="order_new_phone">收货人电话：</label>
+                <input id="order_new_phone" class="form-control" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+                <input id="order_new_btn" type="button" class="form-control" value="确定保存"/>
+            </div>
+            <span id="order_modal_close">&times</span>
+        </div>
+    </div>
+<body>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html>

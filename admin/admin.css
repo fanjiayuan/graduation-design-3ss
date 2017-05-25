@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+.can {
+  cursor: pointer;
+}
+.cannot {
+  cursor: not-allowed;
+}
+.pro-table {
+  width: 100%;
+}
+.pro-table th {
+  height: 40px;
+  line-height: 40px;
+  color: #F8B64A;
+}
+.pro-table th:first-child {
+  width: 8%;
+}
+.pro-table th:nth-child(2) {
+  width: 22%;
+}
+.pro-table th:nth-child(3) {
+  width: 18%;
+}
+.pro-table th:nth-child(4) {
+  width: 24%;
+}
+.pro-table th:nth-child(5) {
+  width: 12%;
+}
+.pro-table th:nth-child(6) {
+  width: 16%;
+}
+.pro-table td {
+  border-top: 2px dashed #F8B64A;
+  padding: 10px 0;
+  height: 205px;
+}
+.pro-table tfoot td {
+  width: 100%;
+  text-align: center;
+  height: 80px;
+}
+.pro-table tfoot td button {
+  width: 60%;
+  height: 45px;
+}
+.pro-table .pic1,
+.pro-table .pic2 {
+  position: relative;
+}
+.pro-table .pic1 div,
+.pro-table .pic2 div {
+  width: 220px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -110px;
+  border: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pro-table .pic1 div:hover,
+.pro-table .pic2 div:hover {
+  border-color: #F8B64A;
+  cursor: pointer;
+}
+.pro-table .pic1 div img,
+.pro-table .pic2 div img {
+  width: 200px;
+}
+.pro-table .pic1 div {
+  height: 184px;
+  margin-top: -92px;
+}
+.pro-table .pic1 div img {
+  height: 164px;
+}
+.pro-table .pic2 div {
+  height: 85px;
+  margin-top: -42.5px;
+}
+.pro-table .pic2 div img {
+  height: 65px;
+}
+.pro-table .pname,
+.pro-table .price,
+.pro-table .actions,
+.pro-table .pid {
+  text-align: center;
+}
+.pro-table .actions a {
+  text-decoration: none;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+.pro-table .actions a:hover {
+  color: #F8B64A;
+}
+.pro-table .modify-input {
+  padding: 10px 15px;
+  border: 2px solid #F8B64A;
+  color: #F8B64A;
+  display: none;
+}
+.pro-table input[type="file"].modify-input,
+.pro-table input[type="submit"].modify-input {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+}
+.pro-table .price .modify-input {
+  width: 80px;
+}
+#tabs {
+  position: relative;
+}
+#allActions,
+#userActions {
+  position: absolute;
+  width: 190px;
+  height: 35px;
+  top: 10px;
+  right: 30px;
+}
+#allActions a,
+#userActions a {
+  position: absolute;
+  width: 90px;
+  height: 35px;
+  top: 0;
+  text-align: center;
+  line-height: 35px;
+  background: #fff;
+  color: #1c94c4;
+  text-decoration: none;
+  border-radius: 8px;
+}
+#allActions a.can:hover,
+#userActions a.can:hover {
+  color: #F8B64A;
+}
+#allActions a:first-child,
+#userActions a:first-child {
+  left: 0;
+}
+#allActions a:nth-child(2),
+#userActions a:nth-child(2) {
+  right: 0;
+}
+#datepicker {
+  float: right;
+  margin: 0 5% 10px 0;
+}
+#tabs {
+  clear: both;
+}
+.header-brand {
+  position: absolute;
+  left: 36%;
+  top: 5px;
+  letter-spacing: 5px;
+  font-size: 40px;
+  color: #F8B64A;
+  font-weight: 500;
+  text-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.button-groups {
+  position: absolute;
+  padding: 15px;
+  left: 36%;
+  top: 53px;
+  margin-left: -10px;
+  width: 200px;
+  text-align: left;
+  border-radius: 7px;
+}
+.button-groups > button:not(:last-child) {
+  margin-bottom: 10px;
+}
+.button-groups > div {
+  margin-bottom: 10px;
+  display: none;
+}
+.button-groups > div input {
+  padding: 10px 15px;
+  border: 2px solid #F8B64A;
+  color: #F8B64A;
+  margin-bottom: 10px;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 5%;
+}
+.header {
+  position: relative;
+}
+.header:before,
+.header:after {
+  content: "";
+  display: table;
+}
+.header:after {
+  clear: both;
+}
+#_users table {
+  width: 100%;
+}
+#_users table th {
+  height: 40px;
+  line-height: 40px;
+  color: #F8B64A;
+}
+#_users table th:first-child {
+  width: 15%;
+}
+#_users table th:nth-child(2) {
+  width: 25%;
+}
+#_users table th:nth-child(3) {
+  width: 25%;
+}
+#_users table th:nth-child(4) {
+  width: 15%;
+}
+#_users table th:nth-child(5) {
+  width: 20%;
+}
+#_users table td {
+  border-top: 2px dashed #F8B64A;
+  padding: 10px 0;
+  color: #F8B64A;
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+#_users table .actions a {
+  text-decoration: none;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+#_users table .actions a:hover {
+  color: #F8B64A;
+}
+#_users table .modify-input {
+  padding: 10px 15px;
+  border: 2px solid #F8B64A;
+  color: #F8B64A;
+  display: none;
+}

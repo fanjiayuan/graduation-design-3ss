@@ -1,0 +1,270 @@
+@primary-c:#F8B64A;
+
+
+*{box-sizing: border-box}
+
+.clearfix(){
+    &:before,&:after{
+        content: "";
+        display: table;
+    }
+    &:after{
+        clear:both;
+    }
+}
+
+.can{
+    cursor:pointer;
+}
+.cannot{
+    cursor: not-allowed;
+}
+
+//商品管理部分
+.pro-table{
+    width:100%;
+    th{
+        height:40px;
+        line-height: 40px;
+        color:@primary-c;
+        &:first-child{
+            width:8%;
+        }
+        &:nth-child(2){
+            width:22%;
+        }
+        &:nth-child(3){
+            width: 18%;
+        }
+        &:nth-child(4){
+            width:24%;
+        }
+        &:nth-child(5){
+            width:12%;
+        }
+        &:nth-child(6){
+            width:16%;
+        }
+    }
+    td{
+        border-top: 2px dashed @primary-c;
+        padding:10px 0;
+        height:205px;
+    }
+    tfoot{
+        td{
+            width:100%;
+            text-align: center;
+            height:80px;
+            button{
+                width:60%;
+                height:45px;
+            }
+        }
+    }
+    .pic1,.pic2{
+        position: relative;
+        div{
+            width:220px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-left:-110px;
+            border: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                border-color: @primary-c;
+                cursor: pointer;
+            }
+            img{
+                width:200px;
+            }
+        }
+    }
+    .pic1{
+        div {
+            height: 184px;
+            margin-top:-92px;
+            img {
+                height: 164px;
+            }
+        }
+    }
+    .pic2{
+        div {
+            height: 85px;
+            margin-top:-42.5px;
+            img {
+                height: 65px;
+            }
+        }
+    }
+    .pname,.price,.actions,.pid{
+        text-align: center;
+    }
+    .actions{
+        a{
+            text-decoration: none;
+            display: inline-block;
+            width:50px;
+            text-align: center;
+            &:hover{
+                color:@primary-c;
+            }
+        }
+    }
+    .modify-input{
+        padding:10px 15px;
+        border: 2px solid @primary-c;
+        color:@primary-c;
+        display: none;
+    }
+    input[type="file"].modify-input,input[type="submit"].modify-input{
+        width: 0;
+        height:0;
+        padding: 0;
+        border: none;
+    }
+    .price .modify-input{
+        width:80px;
+    }
+}
+
+#tabs{
+    position: relative;
+}
+
+#allActions,#userActions{
+    position: absolute;
+    width:190px;
+    height:35px;
+    top:10px;
+    right:30px;
+    a{
+        position: absolute;
+        width:90px;
+        height:35px;
+        top:0;
+        text-align: center;
+        line-height: 35px;
+        background: #fff;
+        color:#1c94c4;
+        text-decoration: none;
+        border-radius: 8px;
+        &.can:hover{
+            color:@primary-c;
+        }
+        &:first-child{
+            left:0;
+        }
+        &:nth-child(2){
+            right:0;
+        }
+    }
+}
+
+//头部的一些样式
+#datepicker{
+    float:right;
+    margin:0 5% 10px 0;
+}
+#tabs{
+    clear: both;
+}
+
+.header-brand{
+    position: absolute;
+    left:36%; top:5px;
+    letter-spacing: 5px;
+    font-size:40px;
+    color:@primary-c;
+    font-weight:500;
+    text-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
+}
+
+.button-groups{
+    position: absolute;
+    padding:15px;
+    left:36%; top:53px;
+    margin-left:-10px;
+    width:200px;
+    text-align: left;
+    border-radius: 7px;
+    >button:not(:last-child){
+        margin-bottom:10px;
+    }
+    >div{
+        margin-bottom:10px;
+        display: none;
+        input{
+            padding:10px 15px;
+            border: 2px solid @primary-c;
+            color:@primary-c;
+            margin-bottom:10px;
+        }
+    }
+}
+
+.logo{
+    position: absolute;
+    top:10px; left:5%;
+}
+
+.header{
+    .clearfix();
+    position: relative;
+}
+
+#_users{
+    table{
+        width:100%;
+        th {
+            height: 40px;
+            line-height: 40px;
+            color: @primary-c;
+            &:first-child {
+                width: 15%;
+            }
+            &:nth-child(2) {
+                width: 25%;
+            }
+            &:nth-child(3) {
+                width: 25%;
+            }
+            &:nth-child(4){
+                width: 15%;
+            }
+            &:nth-child(5){
+                width:20%;
+            }
+        }
+        td{
+            border-top: 2px dashed @primary-c;
+            padding:10px 0;
+            color:@primary-c;
+            font-size:20px;
+            text-align: center;
+            height:50px;
+            line-height: 50px;
+        }
+        .actions{
+            a{
+                text-decoration: none;
+                display: inline-block;
+                width:50px;
+                text-align: center;
+                &:hover{
+                    color:@primary-c;
+                }
+            }
+        }
+        .modify-input{
+            padding:10px 15px;
+            border: 2px solid @primary-c;
+            color:@primary-c;
+            display: none;
+        }
+    }
+}
