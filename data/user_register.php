@@ -29,6 +29,9 @@ if($row[0] !== null) {
     die('{"code":5,"msg":"该用户名已注册！"}');
 }
 
+//加密密码
+$upwd = md5($upwd);
+
 $sql = "INSERT INTO 3ss_user VALUES(null,'$uname','$upwd')";
 mysqli_query($conn,$sql);
 $uid = mysqli_insert_id($conn);

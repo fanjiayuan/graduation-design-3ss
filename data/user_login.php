@@ -3,6 +3,9 @@ header('Content-Type:application/json;charset=UTF-8');
 @$uname = $_REQUEST['uname'] or die('{"code":3,"msg":"请输入用户名！"}');
 @$upwd = $_REQUEST['upwd'] or die('{"code":4,"msg":"请输入密码！"}');
 require('0_init.php');
+
+$upwd = md5($upwd);
+
 $sql = "SELECT * FROM 3ss_admin";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_all($result,MYSQLI_ASSOC);

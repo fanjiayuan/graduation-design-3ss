@@ -9,16 +9,9 @@ CREATE TABLE 3ss_user(
     upwd VARCHAR(32)
 );
 INSERT INTO 3ss_user VALUES
-(10,'fjy','123456'),
-(NULL,'wyq','123456'),
-(NULL,'测试用户一号','123456'),
-(NULL,'测试用户二号','123456'),
-(NULL,'测试用户三号','123456'),
-(NULL,'测试用户四号','123456'),
-(NULL,'测试用户五号','123456'),
-(NULL,'测试用户六号','123456'),
-(NULL,'测试用户七号','123456'),
-(NULL,'测试用户八号','123456');
+(NULL,'fjy','e10adc3949ba59abbe56e057f20f883e'),
+(NULL,'wyq','e10adc3949ba59abbe56e057f20f883e');
+
 
 CREATE TABLE 3ss_admin(
     aid INT PRIMARY KEY AUTO_INCREMENT,
@@ -26,7 +19,7 @@ CREATE TABLE 3ss_admin(
     apwd VARCHAR(32)
 );
 INSERT INTO 3ss_admin VALUES
-(1,'admin','123456');
+(NULL,'admin','e10adc3949ba59abbe56e057f20f883e');
 
 CREATE TABLE 3ss_product(
     pid INT PRIMARY KEY AUTO_INCREMENT,

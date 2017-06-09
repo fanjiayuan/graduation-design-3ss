@@ -74,7 +74,7 @@ function loadProduct(id1){
 
 //倒计时功能
 var countDown={
-    END:new Date("2017/4/23 00:00:00").getTime(),
+    END:new Date("2017/6/5 00:00:00").getTime(),
     NOW:null,
     timer:null,
     interval:1000,
